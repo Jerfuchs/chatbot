@@ -2,10 +2,6 @@ from flask import Flask, request
 from flask_mongoengine import MongoEngine
 import json
 
-
-
-
-
 app = Flask(__name__)
 app.config['MONGODB_SETTINGS'] = {
     'db': 'chat_service_db',

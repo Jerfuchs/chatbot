@@ -1,17 +1,12 @@
-import json
-from asyncio import exceptions
 from base64 import encode
 
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_cors import CORS
 
 import config
-from validation.email_validation import EmailValidatior
 from app_requests.chat_service_requests import ChatService
-from app_requests.knowledgebase_service_requests import KnowledgebaseService
 from app_requests.botflow_service_requests import Botflowservice
 
-from chat import get_response
 
 app = Flask(__name__)
 CORS(app)

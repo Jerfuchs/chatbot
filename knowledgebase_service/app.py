@@ -1,5 +1,4 @@
-from click import pass_context
-from flask import Flask, request, url_for
+from flask import Flask, request
 from flask_mongoengine import MongoEngine
 from Knowledgebase import Knowledgebase
 import json
