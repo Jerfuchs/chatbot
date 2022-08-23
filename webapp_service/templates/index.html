@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- generell meta info -->
+  <meta charset="utf-8" /> <!-- UTF-8 is needed for emojis! -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Some Homepage</title>
+  <meta name="description" content="some description..." />
+  <!-- customer style sheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='customer_page_assests/bootstrap/css/bootstrap.min.css') }}">
+  <!-- original styles src:
+  <link rel="stylesheet" href="customer_page_assests/bootstrap/css/bootstrap.min.css" />
+  -->
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin:700" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- chatbot style sheets -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" /> -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='chatbot_assets/css/main.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='chatbot_assets/css/chatbox.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='chatbot_assets/css/custom.min.css') }}">
+    <!-- original styles src:
+  <link rel="stylesheet" href="chatbot_assets/css/main.min.css" />
+  <link rel="stylesheet" href="chatbot_assets/css/chatbox.min.css" />
+  <link rel="stylesheet" href="chatbot_assets/css/custom.min.css" />
+  -->
+</head>
+
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+  <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+    <div class="container"><a class="navbar-brand" href="#">Grayscale</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item nav-link"><a class="nav-link active" href="#about">About</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="#download">download</a></li>
+          <li class="nav-item nav-link"><a class="nav-link" href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header class="masthead" style="background-image:url('../static/customer_page_assests/img/intro-bg.jpg'); background-color:#7F7E7E;">
+    <div class="intro-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1 class="brand-heading">grayscale</h1>
+            <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created with love.</p><a class="btn btn-link btn-circle" role="button" href="#about"><i class="fa fa-angle-double-down animated"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="text-center content-section" id="about" style="background-color:grey;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>About grayscale</h2>
+          <p>Grayscale is a free Bootstrap theme. It can be yours right now, simply download the template on&nbsp;<a href="#">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
+          <p>This theme features stock photos by&nbsp;<a href="#">Gratisography</a>&nbsp;along with a custom Google Maps skin courtesy of&nbsp;<a href="#">Snazzy Maps</a>.</p>
+          <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with SASS and LESS files for easy customization!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="text-center download-section content-section" id="download" style="background-image:url('../static/customer_page_assests/img/downloads-bg.jpg'); background-color:#7F7E7E;">
+    <div class="container">
+      <div class="col-lg-8 mx-auto">
+        <h1>Download Grayscale</h1>
+        <p>You can download Grayscale for free on the preview page.</p><button class="btn btn-primary btn-lg btn-default" type="button">visit download page</button>
+      </div>
+    </div>
+  </section>
+  <section class="text-center content-section" id="contact" style="background-color:grey;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Contact us</h2>
+          <p>Feel free to leave us a comment on the<a href="#">&nbsp;Grayscale template overview page</a>&nbsp;to give some feedback about this theme!</p>
+          <ul class="list-inline banner-social-buttons">
+            <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">&nbsp; Google+</span></button></li>
+            <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-twitter fa-fw"></i><span class="network-name">&nbsp;Twitter</span></button></li>
+            <li class="list-inline-item">&nbsp;<button class="btn btn-primary btn-lg btn-default" type="button"><i class="fa fa-github fa-fw"></i><span class="network-name">&nbsp;github</span></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer style="background-color:#7F7E7E;">
+    <div class="container text-center">
+      <p>Copyright ©&nbsp;Grayscale 2022</p>
+    </div>
+  </footer>
+
+  <!-- START CHATBOT -->
+  <div id="chatbot_overlay" style="">
+    <div class="row chatbot_support_active" id="chatbot_support">
+      <!-- start chatbox -->
+      <div id="chatbox_wrapper" class="col" style="padding: 0; display: flex;">
+        <div class="card" id="chatbox" style="width: 100%;">
+
+          <!-- start chatbox-header -->
+          <div class="card-header" id="chatbox_header">
+            <div class="header-col-1">
+              <div class="logo-wrapper">
+                <picture><img src="../static/chatbot_assets/img/header.jpg" style="max-width: 60px;max-height: 60px;height:60px;border-radius: 20%;background: rgba(255,255,255,0);" alt="logo" /></picture>
+              </div>
+              <div class="title-description-wrapper">
+                <div class="">
+                  <h1 id="header-title">Mindspace Chatbot!</h1>
+                </div>
+                <div class="">
+                  <h3 id="header-description">this is some dummy chatbot, we hope you enjoy!</h3>
+                </div>
+              </div>
+            </div>
+            <div class="header-col-2">
+              <h1 id="header-welcome">Hello back, user!</h1>
+            </div>
+            <div class="header-col-3">
+              <span id="online-icon">
+                <div id="online-blink"></div>
+              </span>
+              <p id="header-status">online</p>
+            </div>
+          </div>
+          <!-- end chatbox-header -->
+          <!-- start chatbox-body -->
+
+          <div class="card-body" id="chatbot_body">
+            <div class="" id="chatbox_chat_wrapper" style="padding: 10px;">
+
+
+              <div class="col message_item_wrapper message_item_wrapper-visitor">
+                <div class="message_wrapper">
+                  <div class="col messages_item messages_item-visitor">
+                    <p class="message_type_text">Erste Nachricht: Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="sender_info_in-message-visitor">
+                      <p class="time_sent">12:13</p>
+                    </div>
+                  </div>
+                  <div class="message_item_info message_item_info_visitor">
+                    <p class="sender_info">
+                      <span class="name_sent">
+                        <i>visitor</i>
+                      </span>
+                      <span class="time_sent">
+                        <i>12:13</i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="message_sender_img_wrapper-visitor">
+                  <picture><img src="chatbot_assets/img/header.jpg" style="max-width: 30px;max-height: 30px;height:30px;border-radius: 20%;background: rgba(255,255,255,0);" alt="logo" /></picture>
+                </div>
+              </div>
+
+              <div class="col message_item_wrapper message_item_wrapper-operator">
+                <div class="message_wrapper">
+                  <div class="col messages_item messages_item-operator">
+                    <p class="message_type_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="btn_choose_answer">
+                      <!--
+                      <button id="btn_choose_restore_chat" name="btn_choose_restore_chat" type="button" value="restore_chat">Restore safed chat</button>
+                      <button id="btn_choose_create_chat" name="btn_choose_create_chat" type="button" value="create_chat">Create new chat</button>
+                      -->
+                      <button type="button" class="btn_choose_" onclick="post_decision_('action_id', 'restore_chat', 'timestamp')">Restore safed chat</button>
+                      <button type="button" class="btn_choose_" onclick="post_decision_('action_id', 'create_chat', 'timestamp')">Create new chat</button>
+                    </div>
+                    <div class="sender_info_in-message-operator">
+                      <p class="time_sent">12:13</p>
+                    </div>
+                  </div>
+                  <div class="message_item_info message_item_info_operator">
+                    <p class="sender_info">
+                      <span class="name_sent">
+                        <i>operator</i>
+                      </span>
+                      <span class="time_sent">
+                        <i>12:13</i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="message_sender_img_wrapper-operator">
+                  <picture><img src="chatbot_assets/img/header.jpg" style="max-width: 30px;max-height: 30px;height:30px;border-radius: 20%;background: rgba(255,255,255,0);" alt="logo" /></picture>
+                </div>
+              </div>
+
+              <!-- some dummy chat history
+              <div class="col message_item_wrapper message_item_wrapper-visitor">
+                <div class="message_wrapper">
+                  <div class="col messages_item messages_item-visitor">
+                    <p class="message_type_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="sender_info_in-message-visitor">
+                      <p class="time_sent">12:14</p>
+                    </div>
+                  </div>
+                  <div class="message_item_info message_item_info_visitor">
+                    <p class="sender_info">
+                      <span class="name_sent">
+                        <i>visitor</i>
+                      </span>
+                      <span class="time_sent">
+                        <i>12:14</i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="message_sender_img_wrapper-visitor">
+                  <picture><img src="chatbot_assets/img/header.jpg" style="max-width: 30px;max-height: 30px;height:30px;border-radius: 20%;background: rgba(255,255,255,0);" alt="logo" /></picture>
+                </div>
+              </div>
+              <div class="col message_item_wrapper message_item_wrapper-operator">
+                <div class="message_wrapper">
+                  <div class="col messages_item messages_item-operator">
+                    <p class="message_type_text">Excepteur non proident sunt id est laborum.</p>
+                    <div class="sender_info_in-message-operator">
+                      <p class="time_sent">12:14</p>
+                    </div>
+                  </div>
+                  <div class="message_item_info message_item_info_operator">
+                    <p class="sender_info">
+                      <span class="name_sent">
+                        <i>operator</i>
+                      </span>
+                      <span class="time_sent">
+                        <i>12:14</i>
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                <div class="message_sender_img_wrapper-operator">
+                  <picture><img src="chatbot_assets/img/header.jpg" style="max-width: 30px;max-height: 30px;height:30px;border-radius: 20%;background: rgba(255,255,255,0);" alt="logo" /></picture>
+                </div>
+              </div>
+              -->
+            </div>
+          </div>
+          <!-- end chatbox-body -->
+          <!-- start chatbox-footer -->
+          <div class="card-footer" id="chatbot_footer">
+
+            <div class="border_2" id="chatbox_editor" style="">
+
+              <div id="chatbox_send_messages">
+                <div class="emojibar" id="emojibar">emojibar here...</div>
+                <div class="wrapper">
+                  <div id="js-chatbar" class="chat-bar">
+                    <div id="js-toggle" class="chat-bar__toggle" onclick="toggle_chatbar()">
+                      <i class="material-icons">add</i>
+                    </div>
+                    <div class="chat-bar__message">
+                      <input class="chat-bar__input" type="text" id="textbox_id" placeholder="Message...">
+                    </div>
+                    <div class="chat-bar__buttons">
+                      <div class="button b-1 emojibar_toggle" id="emojibar_toggle" onclick="toggle_emojibar()"><i class="material-icons">mood</i></div>
+                      <div class="button b-2"><i class="material-icons">camera_alt</i></div>
+                      <div class="button b-3"><i class="material-icons">photo</i></div>
+                      <div class="button b-4"><i class="material-icons">more_horiz</i></div>
+                    </div>
+                    <div class="chat-bar__submit">
+                      <button id="send_message" class="chatbox_send-footer send_button">
+                        <svg id="send_message_icon" width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                          <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                            <g fill-rule="nonzero">
+                              <path
+                                d="M3.78963301,2.77233335 L24.8609339,12.8499121 C25.4837277,13.1477699 25.7471402,13.8941055 25.4492823,14.5168992 C25.326107,14.7744476 25.1184823,14.9820723 24.8609339,15.1052476 L3.78963301,25.1828263 C3.16683929,25.4806842 2.42050372,25.2172716 2.12264586,24.5944779 C1.99321184,24.3238431 1.96542524,24.015685 2.04435886,23.7262618 L4.15190935,15.9983421 C4.204709,15.8047375 4.36814355,15.6614577 4.56699265,15.634447 L14.7775879,14.2474874 C14.8655834,14.2349166 14.938494,14.177091 14.9721837,14.0981464 L14.9897199,14.0353553 C15.0064567,13.9181981 14.9390703,13.8084248 14.8334007,13.7671556 L14.7775879,13.7525126 L4.57894108,12.3655968 C4.38011873,12.3385589 4.21671819,12.1952832 4.16392965,12.0016992 L2.04435886,4.22889788 C1.8627142,3.56286745 2.25538645,2.87569101 2.92141688,2.69404635 C3.21084015,2.61511273 3.51899823,2.64289932 3.78963301,2.77233335 Z">
+                              </path>
+                            </g>
+                          </g>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div id="mindspace-copyright">
+              <p>© 2022 Mindspace&nbsp;</p>
+            </div>
+
+          </div>
+          <!-- end chatbox-footer -->
+
+        </div>
+      </div>
+      <!-- end chatbox -->
+    </div>
+    <!-- START CHATBOT OPEN/CLOSE TOGGLE -->
+    <div id="chatbot_toggler">
+      <!-- button type="button" -->
+      <button class="" id="chatbot_open_toggle">
+        <svg width="36" height="29" viewBox="0 0 36 29" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M28.2857 10.5714C28.2857 4.88616 21.9576 0.285714 14.1429 0.285714C6.32813 0.285714 0 4.88616 0 10.5714C0 13.8259 2.08929 16.7388 5.34375 18.6272C4.66071 20.2946 3.77679 21.0781 2.9933 21.9621C2.77232 22.2232 2.51116 22.4643 2.59152 22.846C2.65179 23.1875 2.93304 23.4286 3.23438 23.4286C3.25446 23.4286 3.27455 23.4286 3.29464 23.4286C3.89732 23.3482 4.47991 23.2478 5.02232 23.1071C7.05134 22.5848 8.93973 21.721 10.6071 20.5357C11.7321 20.7366 12.9174 20.8571 14.1429 20.8571C21.9576 20.8571 28.2857 16.2567 28.2857 10.5714ZM36 15.7143C36 12.3594 33.7902 9.38616 30.3951 7.51786C30.6964 8.50223 30.8571 9.52679 30.8571 10.5714C30.8571 14.1674 29.0089 17.4821 25.654 19.933C22.5402 22.183 18.4621 23.4286 14.1429 23.4286C13.5603 23.4286 12.9576 23.3884 12.375 23.3482C14.8862 24.9955 18.221 26 21.8571 26C23.0826 26 24.2679 25.8795 25.3929 25.6786C27.0603 26.8638 28.9487 27.7277 30.9777 28.25C31.5201 28.3906 32.1027 28.4911 32.7054 28.5714C33.0268 28.6116 33.3281 28.3504 33.4085 27.9888C33.4888 27.6071 33.2277 27.3661 33.0067 27.1049C32.2232 26.221 31.3393 25.4375 30.6563 23.7701C33.9107 21.8817 36 18.9888 36 15.7143Z" />
+        </svg>
+      </button>
+    </div>
+    <!-- END CHATBOT OPEN/CLOSE TOGGLE -->
+  </div>
+  <!-- END CHATBOT -->
+
+  <!-- customer assets -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='customer_page_assests/js/grayscale.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='customer_page_assests/js/script.min.js') }}"></script>
+  <!-- original script src:
+  <script src="customer_page_assests/js/grayscale.js"></script>
+  <script src="customer_page_assests/js/script.min.js"></script>
+  -->
+
+  <!-- chatbot assets -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='chatbot_assets/js/chatbot.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='chatbot_assets/js/chatbox.js') }}"></script>
+  <!-- original script src:
+  <script src="chatbot_assets/js/chatbot.js"></script>
+  <script src="chatbot_assets/js/chatbox.js"></script>
+  <script src="chatbot_assets/js/message_dummy.js"></script>
+  <script src="chatbot_assets/js/conversation.js"></script>
+  -->
+
+  <script>
+
+    /* initialise the chat storage in localStorage with the chat_id */
+    window.onload = function() {
+
+      scroll_to_bottom_of_chat();
+      check_available_chats();
+
+      //const myTimeout = setTimeout(clear_chat_storage(1234), 3000);
+    };
+
+  </script>
+</body>
+
+</html>

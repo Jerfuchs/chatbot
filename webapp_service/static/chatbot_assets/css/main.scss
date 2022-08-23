@@ -1,0 +1,211 @@
+/* ___________________________________________________________________________*/
+/* META ________________________________________________________________________
+file: main.scss
+dev version: v3.3
+last edit: 13.06.2022
+author: cedrick
+______________________________________________________________________________*/
+/* ___________________________________________________________________________*/
+/* FONTS _____________________________________________________________________*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+/* ___________________________________________________________________________*/
+/* COLORS ____________________________________________________________________*/
+$primary_color: rgba(0,0,0,.75);
+/* ___________________________________________________________________________*/
+/* _____________________________________________________________________________
+using flexbox:
+display: -webkit-box;      // OLD - iOS 6-, Safari 3.1-6
+display: -moz-box;         // OLD - Firefox 19- (buggy but mostly works)
+display: -ms-flexbox;      // TWEENER - IE 10
+display: -webkit-flex;     // NEW - Chrome
+display: flex;             // NEW, Spec - Opera 12.1, Firefox 20+
+using media-queries:
+@media (min-width: 576px) { ... }   // Small devices (landscape phones, 576px and up)
+@media (min-width: 768px) { ... }   // Medium devices (tablets, 768px and up)
+@media (min-width: 992px) { ... }   // Large devices (desktops, 992px and up)
+@media (min-width: 1200px) { ... }  // Extra large devices (large desktops, 1200px and up)
+______________________________________________________________________________*/
+/* ___________________________________________________________________________*/
+/* HEADER ____________________________________________________________________*/
+$chatbox-header_background_color: rgba(225,225,225,.75);
+$chatbox-header_border_color: rgba(225,225,225,.75);
+$chatbox-header_border_size: 1em;
+$title_font_family: "roboto", 'Nunito', sans-serif;
+$title_font_style: normal; // normal, italic, oblique
+$title_font_weight: normal; // normal, bold
+$title_font_line_height: normal;
+$title_font_variant: normal; // normal, small-caps
+$title_font_size: 1em;
+$title_font_color: rgba(0,0,0,.75);
+$title_background_color: rgba(225,225,225,.75);
+$description_font_family: "roboto", 'Nunito', sans-serif;
+$description_font_style: normal; // normal, italic, oblique
+$description_font_weight: normal; // normal, bold
+$description_font_line_height: normal;
+$description_font_variant: normal; // normal, small-caps
+$description_font_size: 1em;
+$description_font_color: rgba(0,0,0,.75);
+$description_background_color: rgba(225,225,225,.75);
+$status-bar_font_family: "roboto", 'Nunito', sans-serif;
+$status-bar_font_style: normal; // normal, italic, oblique
+$status-bar_font_weight: normal; // normal, bold
+$status-bar_font_line_height: normal;
+$status-bar_font_variant: normal; // normal, small-caps
+$status-bar_font_size: 1em;
+$status-bar_font_color: rgba(0,0,0,.75);
+$status-bar_background_color: rgba(225,225,225,.75);
+/* ___________________________________________________________________________*/
+/* BODY ______________________________________________________________________*/
+$chatbox-body_background_color: rgba(225,225,225,.75);
+$chatbox-body_border_color: rgba(225,225,225,.75);
+$chatbox-body_border_size: 1em;
+$message-operator_font_family: "roboto", 'Nunito', sans-serif;
+$message-operator_font_style: normal; // normal, italic, oblique
+$message-operator_font_weight: normal; // normal, bold
+$message-operator_font_line_height: normal;
+$message-operator_font_variant: normal; // normal, small-caps
+$message-operator_font_size: 1em;
+$message-operator_font_color: rgba(0,0,0,.75);
+$message-operator_background_color: rgba(225,225,225,.75);
+$message-visitor_font_family: "roboto", 'Nunito', sans-serif;
+$message-visitor_font_style: normal; // normal, italic, oblique
+$message-visitor_font_weight: normal; // normal, bold
+$message-visitor_font_line_height: normal;
+$message-visitor_font_variant: normal; // normal, small-caps
+$message-visitor_font_size: 1em;
+$message-visitor_font_color: rgba(0,0,0,.75);
+$message-visitor_background_color: rgba(225,225,225,.75);
+$message-writing_font_family: "roboto", 'Nunito', sans-serif;
+$message-writing_font_style: normal; // normal, italic, oblique
+$message-writing_font_weight: normal; // normal, bold
+$message-writing_font_line_height: normal;
+$message-writing_font_variant: normal; // normal, small-caps
+$message-writing_font_size: 1em;
+$message-writing_font_color: rgba(0,0,0,.75);
+$message-writing_background_color: rgba(225,225,225,.75);
+$sender-name_font_family: "roboto", 'Nunito', sans-serif;
+$sender-name_font_style: normal; // normal, italic, oblique
+$sender-name_font_weight: normal; // normal, bold
+$sender-name_font_line_height: normal;
+$sender-name_font_variant: normal; // normal, small-caps
+$sender-name_font_size: 1em;
+$sender-name_font_color: rgba(0,0,0,.75);
+$sender-name_background_color: rgba(225,225,225,.75);
+$sender-timestamp_font_family: "roboto", 'Nunito', sans-serif;
+$sender-timestamp_font_style: normal; // normal, italic, oblique
+$sender-timestamp_font_weight: normal; // normal, bold
+$sender-timestamp_font_line_height: normal;
+$sender-timestamp_font_variant: normal; // normal, small-caps
+$sender-timestamp_font_size: 1em;
+$sender-timestamp_font_color: rgba(0,0,0,.75);
+$sender-timestamp_background_color: rgba(225,225,225,.75);
+/* ___________________________________________________________________________*/
+/* FOOTER ____________________________________________________________________*/
+$chatbox-footer_background_color: rgba(225,225,225,.75);
+$chatbox-footer_border_color: rgba(225,225,225,.75);
+$chatbox-footer_border_size: 1em;
+$menu-bar-toggle_font_color: rgba(0,0,0,.75);
+$menu-bar-toggle_background_color: rgba(225,225,225,.75);
+$menu-bar_font_color: rgba(0,0,0,.75);
+$menu-bar_background_color: rgba(225,225,225,.75);
+$emoji-bar-toggle_font_color: rgba(0,0,0,.75);
+$emoji-bar-toggle_background_color: rgba(225,225,225,.75);
+$message-input_font_family: "roboto", 'Nunito', sans-serif;
+$message-input_font_style: normal; // normal, italic, oblique
+$message-input_font_weight: normal; // normal, bold
+$message-input_font_line_height: normal;
+$message-input_font_variant: normal; // normal, small-caps
+$message-input_font_size: 1em;
+$message-input_font_color: rgba(0,0,0,.75);
+$message-input_background_color: rgba(225,225,225,.75);
+$submit-message_font_color: rgba(0,0,0,.75);
+$submit-message_background_color: rgba(225,225,225,.75);
+$message-brackets_font_family: "roboto", 'Nunito', sans-serif;
+$message-brackets_font_style: normal; // normal, italic, oblique
+$message-brackets_font_weight: normal; // normal, bold
+$message-brackets_font_line_height: normal;
+$message-brackets_font_variant: normal; // normal, small-caps
+$message-brackets_font_size: 1em;
+$message-brackets_font_color: rgba(0,0,0,.75);
+$message-brackets_background_color: rgba(225,225,225,.75);
+$chatbox-toggle_font_color: rgba(0,0,0,.75);
+$chatbox-toggle_background_color: rgba(225,225,225,.75);
+/* ___________________________________________________________________________*/
+/* ___________________________________________________________________________*/
+/* STYLES ____________________________________________________________________*/
+#chatbot_overlay {
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*z-index: 999;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*overflow-x: hidden;*/
+  /*position: absolute;*/
+  z-index: 123457;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: none;
+  max-width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#chatbot_support {
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  display: none;
+  background: #eee;
+  width: 500px;
+  width: 40vw;
+  height: 550px;
+  height: 75vh;
+  z-index: -999;
+  opacity: 0;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* Hide horizontal scrollbar */
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  /*padding-top: 10px;*/
+  /*padding-bottom: 10px;*/
+}
+
+.chatbot_support_active {
+  display: flex !important;
+  flex-direction: column;
+  transform: translateY(-40px);
+  z-index: 2147483647 !important;
+  opacity: 1 !important;
+  transition: all 1.5s ease-in-out;
+}
+
+#chatbot_toggler {
+  text-align: right;
+
+  #chatbot_open_toggle {
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:active {
+      transform: translateY(2px);
+    }
+
+    svg {
+      fill: rgba(0,0,0,.75);
+
+      &:active {
+        transform: scale(.75);
+        fill: rgba(0,0,0,.25);
+      }
+    }
+  }
+}
